@@ -1,3 +1,7 @@
+#Zsh theme based on the lukerandall theme that adds functionality for
+#changing the prompt color to red when running as root. To make this work
+#you must set the theme in root's .zshrc as well as your regular one.
+
 local return_code="%(?..%{$fg_bold[red]%}%? ↵%{$reset_color%})"
 
 function my_git_prompt_info() {
