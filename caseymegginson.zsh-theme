@@ -1,26 +1,16 @@
-#Zsh theme based on the lukerandall theme that adds functionality for
-#changing the prompt color to red when running as root. To make this work
-#you must set the theme in root's .zshrc as well as your regular one.
+# ZSH Theme based on the bira theme with some of my own customizations
+# for things like roots' prompt being red.
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
-local return_code="%(?..%{$fg_bold[red]%}%? ↵%{$reset_color%})"
+# local user_host='%{$terminfo[bold]$fg[green]%}%n@%m%{$reset_color%}'
+local user_host='%{%(#~$fg_bold[red]~$fg_bold[green])%}%n@%m%{$reset_color%}'
+local current_dir='%{$terminfo[bold]$fg[blue]%} %~%{$reset_color%}'
 
-function my_git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  GIT_STATUS=$(git_prompt_status)
-  [[ -n $GIT_STATUS ]] && GIT_STATUS=" $GIT_STATUS"
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$GIT_STATUS$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
+local git_branch='$(git_prompt_info)%{$reset_color%}'
 
-#PROMPT='%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
-PROMPT='%{%(#~$fg_bold[red]~$fg_bold[green])%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
+PROMPT="╭${user_host} ${current_dir} ${git_branch}
+╰%B$%b "
 RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
-ZSH_THEME_GIT_PROMPT_SUFFIX=") %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%%"
-ZSH_THEME_GIT_PROMPT_ADDED="+"
-ZSH_THEME_GIT_PROMPT_MODIFIED="*"
-ZSH_THEME_GIT_PROMPT_RENAMED="~"
-ZSH_THEME_GIT_PROMPT_DELETED="!"
-ZSH_THEME_GIT_PROMPT_UNMERGED="?"
-
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
+ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
