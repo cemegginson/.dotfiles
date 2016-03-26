@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Copy configs
+cp configs/gitconfig ~/.gitconfig
 cp configs/vimrc ~/.vimrc
 cp configs/yaourtrc ~/.yaourtrc
 cp configs/zshrc ~/.zshrc
