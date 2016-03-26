@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Copy configs
-cp vimrc ~/.vimrc
-cp yaourtrc ~/.yaourtrc
-cp zshrc ~/.zshrc
+cp configs/vimrc ~/.vimrc
+cp configs/yaourtrc ~/.yaourtrc
+cp configs/zshrc ~/.zshrc
 
 # Copy zsh theme
-sudo cp caseymegginson.zsh-theme /usr/share/oh-my-zsh/themes/
+sudo cp configs/caseymegginson.zsh-theme /usr/share/oh-my-zsh/themes/
