@@ -75,6 +75,7 @@ export EDITOR="vim"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias smite="kill -9"
 alias cmdeb="cmake -DCMAKE_BUILD_TYPE=Debug .."
 alias cmrel="cmake -DCMAKE_BUILD_TYPE=Release .."
 alias build="make && make install"
