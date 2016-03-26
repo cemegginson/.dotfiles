@@ -1,0 +1,13 @@
+[color]
+    ui = auto
+[user]
+    name = Casey Megginson
+    email = tenncasey@gmail.com
+[github]
+    user = cemegginson
+[core]
+    editor = vim
+[credential]
+    helper = cache --timeout=3600
+[push]
+    default = matching
