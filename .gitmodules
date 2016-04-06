@@ -1,0 +1,9 @@
+[submodule "submodules/multi-monitors-add-on"]
+	path = submodules/multi-monitors-add-on
+	url = https://github.com/spin83/multi-monitors-add-on
+[submodule "submodules/gse-sound-output-device-chooser"]
+	path = submodules/gse-sound-output-device-chooser
+	url = https://github.com/kgshank/gse-sound-output-device-chooser
+[submodule "submodules/gnome-shell-system-monitor-applet"]
+	path = submodules/gnome-shell-system-monitor-applet
+	url = https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet
