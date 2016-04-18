@@ -7,3 +7,6 @@
 [submodule "submodules/gnome-shell-system-monitor-applet"]
 	path = submodules/gnome-shell-system-monitor-applet
 	url = https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet
+[submodule "submodules/nohotcorner"]
+	path = submodules/nohotcorner
+	url = https://github.com/HROMANO/nohotcorner/
