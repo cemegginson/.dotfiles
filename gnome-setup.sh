@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git submodule update --init
+
 mkdir gnome-extensions
 cp -r submodules/gnome-shell-system-monitor-applet/system-monitor@paradoxxx.zero.gmail.com gnome-extensions/
 cp -r submodules/multi-monitors-add-on/multi-monitors-add-on@spin83 gnome-extensions/
