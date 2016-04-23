@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git submodule update --init
+git submodule update --remote
 
 mkdir gnome-extensions
 cp -r submodules/gnome-shell-system-monitor-applet/system-monitor@paradoxxx.zero.gmail.com gnome-extensions/
