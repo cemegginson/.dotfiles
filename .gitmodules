@@ -14,3 +14,7 @@
 	path = submodules/nohotcorner
 	url = https://github.com/HROMANO/nohotcorner/
 	branch = master
+[submodule "submodules/backslide"]
+	path = submodules/backslide
+	url = https://bitbucket.org/LukasKnuth/backslide.git
+    branch = master
