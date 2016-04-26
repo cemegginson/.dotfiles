@@ -33,8 +33,8 @@ export CLICOLOR=1
 
 # Aliases
 alias smite="kill -9"
-alias cmdeb="cmake -DCMAKE_BUILD_TYPE=Debug .."
-alias cmrel="cmake -DCMAKE_BUILD_TYPE=Release .."
+alias cmdeb="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Debug .."
+alias cmrel="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release .."
 alias build="make && make install"
 
 # Personal compiler options
