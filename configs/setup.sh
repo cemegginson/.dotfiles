@@ -71,12 +71,13 @@ source_dir="$(cd "$(dirname "$0")" > /dev/null; pwd)";
 $is_dry_run || target_dir="$(cd "$target_dir" > /dev/null; pwd)";
 
 # Create the array of files to symlink.
-source_files=();
+source_files=(
+  .gitconfig
+  .vimrc
+  .zshrc
+);
 ignored_files=(
-	.gitignore
-	COPYING
-	README.md
-	install.sh
+	setup.sh
 );
 while read -d $'\0' file; do
 	file="${file#./}";
@@ -268,4 +269,3 @@ for file in "${source_files[@]}"; do
 done;
 $has_created_links || echo "All of Tilde's files were symlinked already.";
 echo 'Done.';
-

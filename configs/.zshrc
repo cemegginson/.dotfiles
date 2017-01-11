@@ -1,3 +1,6 @@
+#!/usr/bin/zsh
+# Hashbang is so ShellCheck leaves me alone.
+
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
