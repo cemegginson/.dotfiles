@@ -77,7 +77,7 @@ source_files=(
   .zshrc
 );
 ignored_files=(
-	setup.sh
+	tilde.sh
 );
 while read -d $'\0' file; do
 	file="${file#./}";
