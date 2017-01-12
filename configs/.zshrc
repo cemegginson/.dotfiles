@@ -10,11 +10,6 @@ ZSH_THEME="caseymegginson"
 
 DISABLE_AUTO_UPDATE="true"
 
-COMPLETION_WAITING_DOTS="true"
-
-# Leaving this in case I end up wanting it
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 # Set plugins
 plugins=(git archlinux sudo colored-man cp)
 
